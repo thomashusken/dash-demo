@@ -12,4 +12,3 @@ can then be installed by:
 To run the app locally, use:
 
 - `poetry python run app.py`
-'
