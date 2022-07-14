@@ -20,4 +20,4 @@ ENV PATH="/poetry/bin:${PATH}"
 # Install requirements via Poetry, disable venv creation since we're already in a Docker container
 RUN POETRY_VIRTUALENVS_CREATE=false poetry install -vvv --no-ansi --no-dev
 
-CMD ["gunicorn", "app:server", "-b", "0.0.0.0:8000", "-w", "3"]
+CMD ["gunicorn", "app:server", "-b", "0.0.0.0:8000"]

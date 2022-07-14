@@ -22,4 +22,4 @@ This will run the app on `localhost:8000/gapminder`.
 Alternatively, you can run the app as a docker container:
 
 - `docker build . -t dash-demo:latest`
-- `docker run -d -p 8000:8000`
+- `docker run -p 8000:8000 dash-demo`

@@ -32,5 +32,26 @@ def register_dash(app: Flask) -> Dash:
         size_max=60,
     )
 
-    dash.layout = html.Div([dcc.Graph(id='life-exp-vs-gdp', figure=fig)])
+    dash.layout = html.Div(
+        [
+            html.Div(
+                [
+                    html.H4(
+                        "Mind the gap",
+                        style={
+                            "fontWeight": "bold",
+                            "fontFamily": "sans-serif",
+                        },
+                    ),
+                    html.P(
+                        "Look at all this beautiful data",
+                        style={
+                            "fontFamily": "sans-serif",
+                        },
+                    ),
+                ]
+            ),
+            dcc.Graph(id='life-exp-vs-gdp', figure=fig),
+        ]
+    )
     return dash
